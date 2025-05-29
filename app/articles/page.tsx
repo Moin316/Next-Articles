@@ -10,8 +10,8 @@ type PageProps = {
     };
 };
 
-const page:React.FC<PageProps> = ({searchParams}) => {
-  const search = searchParams.search || "";
+const page:React.FC<PageProps> = async ({searchParams}) => {
+  const search = (await searchParams).search || "";
   
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
